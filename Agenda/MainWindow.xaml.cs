@@ -52,7 +52,7 @@ namespace Agenda
 
         private void ItemListAppointments_Click(object sender, RoutedEventArgs e)
         {
-            DisplayPage.Navigate(new AddAppointment());
+            DisplayPage.Navigate(new AppointmentsList());
         }
 
         private void DisplayPage_Initialized(object sender, EventArgs e)

@@ -14,7 +14,7 @@
     <Grid Background="Purple" DataContext="{StaticResource customerViewSource}">
         <DataGrid x:Name="customerDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,10,407,10" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" >
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding CustomerID}" Header="Customer ID" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding CustomerID}"  Header="Customer ID" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="firstnameColumn" Binding="{Binding Firstname}" Header="Firstname" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="lastnameColumn" Binding="{Binding Lastname}" Header="Lastname" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="mailColumn" Binding="{Binding Mail}" Header="Mail" Width="SizeToHeader"/>

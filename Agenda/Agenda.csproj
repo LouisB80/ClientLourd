@@ -79,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AppointmentsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BrokersList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,6 +110,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentsList.xaml.cs">
+      <DependentUpon>AppointmentsList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Broker.cs" />
     <Compile Include="BrokersList.xaml.cs">
       <DependentUpon>BrokersList.xaml</DependentUpon>

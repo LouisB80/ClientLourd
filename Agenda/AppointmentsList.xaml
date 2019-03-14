@@ -1,0 +1,45 @@
+﻿<Page x:Class="Agenda.AppointmentsList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Agenda"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Liste des Rendez-vous">
+
+    <Grid Background="Lavender">
+        <DataGrid Name="AppointmentsListDataGrid" Margin="10,10,482,10">
+
+        </DataGrid>
+        <Grid x:Name="grid1" HorizontalAlignment="Left" Margin="372,52,0,0" VerticalAlignment="Top" Height="180" Width="408">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Appointment ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+
+            <Label Content="Nom du Courtier :" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <Label Content="Nom du Client :" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <Label Content="Date RDV:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <xctk:DateTimePicker x:Name="dateHourDatePicker" Format="Custom" FormatString="dd/MM/yyyy HH:mm" Value="{Binding ElementName=AppointmentsListDataGrid, Path=SelectedItem.DateHour, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Margin="3,6,-113,11" Grid.Row="3" VerticalAlignment="Center" Width="278"/>
+            <Label Content="Sujet du RDV:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <ComboBox Name="BrokerComboBox" SelectedValue="{Binding ElementName=AppointmentsListDataGrid, Path=SelectedItem.BrokerID}" ItemsSource="{Binding}" DisplayMemberPath="Lastname" SelectedValuePath="BrokerID" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-121,0" Grid.Row="1" VerticalAlignment="Top" Width="278"/>
+            <ComboBox Name="CustomerComboBox" SelectedValue="{Binding ElementName=AppointmentsListDataGrid, Path=SelectedItem.CustomerID}" ItemsSource="{Binding}" DisplayMemberPath="Lastname" SelectedValuePath="CustomerID" Grid.Column="1" HorizontalAlignment="Left" Margin="3,3,-117,0" Grid.Row="2" VerticalAlignment="Top" Width="278"/>
+            <TextBox Name="TxtAppointmentID" Text="{Binding ElementName=AppointmentsListDataGrid, Path=SelectedItem.AppointmentID, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3,10,-111,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278" Grid.ColumnSpan="2"/>
+            <TextBox Name="TxtSubject" Text="{Binding ElementName=AppointmentsListDataGrid, Path=SelectedItem.Subject, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,9,-109,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Grid.ColumnSpan="2"/>
+        </Grid>
+        <Button Name="BtnModify" Content="Enregistrer" HorizontalAlignment="Left" Margin="434,255,0,0" VerticalAlignment="Top" Width="123" Height="32" Click="BtnModify_Click" />
+        <Button Name="BtnDelete"  Content="Supprimer" HorizontalAlignment="Left" Margin="598,255,0,0" VerticalAlignment="Top" Width="119" Height="32" Click="BtnDelete_Click" />
+    </Grid>
+
+</Page>

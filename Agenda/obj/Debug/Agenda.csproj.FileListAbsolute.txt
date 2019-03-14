@@ -35,3 +35,5 @@ C:\Users\Moi\Desktop\VfAgenda\Agenda\Agenda\obj\Debug\BrokersList.baml
 C:\Users\Moi\Desktop\VfAgenda\Agenda\Agenda\bin\Debug\Xceed.Wpf.Toolkit.dll
 C:\Users\Moi\Desktop\VfAgenda\Agenda\Agenda\bin\Debug\Xceed.Wpf.Toolkit.xml
 C:\Users\Moi\Desktop\VfAgenda\Agenda\Agenda\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Moi\Desktop\VfAgenda\Agenda\Agenda\obj\Debug\AppointmentsList.g.cs
+C:\Users\Moi\Desktop\VfAgenda\Agenda\Agenda\obj\Debug\AppointmentsList.baml
